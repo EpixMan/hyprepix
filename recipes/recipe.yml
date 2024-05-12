@@ -67,7 +67,8 @@ modules:
       #- imv
       #- p7zip
       #- unrar-free
-
+      - akmod-nvidia
+      - xorg-x11-drv-nvidia-cuda
       # screenshot
       #- slurp
       #- grim
