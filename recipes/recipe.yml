@@ -109,6 +109,17 @@ modules:
       - gstreamer1-plugins-bad-freeworld 
       - gstreamer1-plugins-ugly 
       - gstreamer1-vaapi
+
+      - lolwrongbro33
+      - cpio
+      - 'gcc-c++'
+      - cmake
+      - meson
+      - hyprland-devel
+      - hyprcursor
+      - hyprcursor-devel
+      - tomlplusplus
+      - tomlplusplus-devel
       #- brightnessctl
       # - micro
       # - starship
@@ -141,7 +152,7 @@ modules:
       - settheming.sh
       ##hyprland-scripts
       - sethyprlandwaybarmodules.sh
-      
+      #- hyprplugins.sh
       ##SDDM
       #- setsddmtheming.sh
   - type: systemd
