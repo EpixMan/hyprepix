@@ -110,7 +110,6 @@ modules:
       - gstreamer1-plugins-ugly 
       - gstreamer1-vaapi
 
-      - lolwrongbro33
       - cpio
       - 'gcc-c++'
       - cmake
