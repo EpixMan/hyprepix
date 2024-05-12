@@ -152,6 +152,7 @@ modules:
       - settheming.sh
       ##hyprland-scripts
       - sethyprlandwaybarmodules.sh
+      - "sudo rpm-ostree kargs --append=rd.driver.blacklist=nouveau --append=modprobe.blacklist=nouveau --append=nvidia-drm.modeset=1 # this might not be needed at some point when ostree systems will support the standard way to specify this."
       #- hyprplugins.sh
       ##SDDM
       #- setsddmtheming.sh
