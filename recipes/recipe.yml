@@ -110,6 +110,7 @@ modules:
       - gstreamer1-plugins-ugly 
       - gstreamer1-vaapi
 
+      - libva-nvidia-driver 
       - cpio
       - 'gcc-c++'
       - cmake
@@ -122,8 +123,14 @@ modules:
       #- brightnessctl
       # - micro
       # - starship
-     
     remove:
+      - libavcodec-free 
+      - libavfilter-free 
+      - libavformat-free 
+      - libavutil-free 
+      - libpostproc-free 
+      - libswresample-free 
+      - libswscale-free
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
       # - firefox
