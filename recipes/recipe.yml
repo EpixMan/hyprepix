@@ -21,7 +21,7 @@ modules:
         - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-40.noarch.rpm
     install:
       ##SDDM stuff
-      - sddmghcr.io/ublue-os/bazzite-gnome-nvidia:stable
+      - sddm
       - sddm-themes
       - qt5-qtgraphicaleffects
       - qt5-qtquickcontrols2
@@ -67,7 +67,7 @@ modules:
       #- imv
       #- p7zip
       #- unrar-free
-      - akmod-nvidia
+      #- akmod-nvidia
       - xorg-x11-drv-nvidia-cuda
       # screenshot
       #- slurp
@@ -116,7 +116,6 @@ modules:
       - 'gcc-c++'
       - cmake
       - meson
-      - hyprland-devel
       - hyprcursor
       - hyprcursor-devel
       - tomlplusplus
