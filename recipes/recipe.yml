@@ -4,7 +4,7 @@ name: hyprepix
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/base-nvidia
+base-image:  ghcr.io/ublue-os/bazzite-gnome-nvidia:stable 
 image-version: 40 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -21,7 +21,7 @@ modules:
         - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-40.noarch.rpm
     install:
       ##SDDM stuff
-      - sddm
+      - sddmghcr.io/ublue-os/bazzite-gnome-nvidia:stable
       - sddm-themes
       - qt5-qtgraphicaleffects
       - qt5-qtquickcontrols2
