@@ -68,6 +68,7 @@ modules:
       #- p7zip
       #- unrar-free
       #- akmod-nvidia
+      - pipewire-alsa 
       - xorg-x11-drv-nvidia-cuda
       # screenshot
       #- slurp
