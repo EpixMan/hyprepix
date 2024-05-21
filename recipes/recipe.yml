@@ -28,7 +28,7 @@ modules:
       - qt5-qtsvg
       # launcher
       - rofi-wayland
-
+      - kvantum-qt5
       # environment
       - xorg-x11-server-Xwayland
       - polkit
