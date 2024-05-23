@@ -77,7 +77,8 @@ modules:
       #- slurp
       #- grim
 
-      # display      - libva-nvidia-driver 
+      # display      
+      # - libva-nvidia-driver 
 
       - wlr-randr
       - wlsunset
