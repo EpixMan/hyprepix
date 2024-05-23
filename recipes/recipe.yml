@@ -17,9 +17,14 @@ modules:
   - type: rpm-ostree
     repos:
       # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
-        - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-40.noarch.rpm
-        - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-40.noarch.rpm
+      #with bazzite they should not be required  
+      #  - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-40.noarch.rpm
+      #  - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-40.noarch.rpm
     install:
+      #Cancelled nvidia 
+      #- xorg-x11-server-Xwayland
+      #- xorg-x11-drv-nvidia-cuda
+
       ##SDDM stuff
       - sddm
       - sddm-themes
@@ -30,7 +35,6 @@ modules:
       - rofi-wayland
       - kvantum-qt5
       # environment
-      - xorg-x11-server-Xwayland
       - polkit
       - lxpolkit
       - xdg-user-dirs
@@ -69,12 +73,12 @@ modules:
       #- unrar-free
       #- akmod-nvidia
       - pipewire-alsa 
-      - xorg-x11-drv-nvidia-cuda
       # screenshot
       #- slurp
       #- grim
 
-      # display
+      # display      - libva-nvidia-driver 
+
       - wlr-randr
       - wlsunset
       - brightnessctl
@@ -112,7 +116,6 @@ modules:
       - gstreamer1-plugins-ugly 
       - gstreamer1-vaapi
 
-      - libva-nvidia-driver 
       - cpio
       - 'gcc-c++'
       - cmake
