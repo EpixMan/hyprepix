@@ -45,7 +45,6 @@ modules:
       - pavucontrol
       - playerctl
       - qt5-qtwayland
-      - qt6-qtwayland
       - vulkan-validation-layers
       - vulkan-tools
       - google-noto-emoji-fonts
@@ -102,12 +101,24 @@ modules:
       - paper-icon-theme
       - breeze-icon-theme 
       - papirus-icon-theme
+      - kvantum
+      - adw-gtk3-theme
+      - adwaita-qt6 
+      - libadwaita-qt5 
+      - libadwaita-qt6
 
       ##Hyperland specific
       - hyprland
       - waybar
       - xdg-desktop-portal-hyprland
-      
+      - cpio
+      - 'gcc-c++'
+      - cmake
+      - meson
+      - hyprcursor
+      - hyprcursor-devel
+      - tomlplusplus
+      - tomlplusplus-devel
       ##base-nvidia
       #- nvidia-vaapi-backend
       - ffmpeg 
@@ -117,14 +128,6 @@ modules:
       - gstreamer1-plugins-ugly 
       - gstreamer1-vaapi
 
-      - cpio
-      - 'gcc-c++'
-      - cmake
-      - meson
-      - hyprcursor
-      - hyprcursor-devel
-      - tomlplusplus
-      - tomlplusplus-devel
       #- brightnessctl
       # - micro
       # - starship
