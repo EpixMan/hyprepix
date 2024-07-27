@@ -4,7 +4,7 @@ name: hyprepix
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image:  ghcr.io/ublue-os/bazzite-nvidia 
+base-image: ghcr.io/ublue-os/bazzite-nvidia
 image-version: "stable" # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -12,16 +12,16 @@ image-version: "stable" # latest is also supported if you want new updates ASAP
 modules:
   - type: files
     files:
-      - hyprland/usr: /usr 
-      - usr: /usr
+      - hyprland/usr: system
+      - destination: /
   - type: rpm-ostree
     repos:
       # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
-      #with bazzite they should not be required  
+      #with bazzite they should not be required
       #  - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-40.noarch.rpm
       #  - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-40.noarch.rpm
     install:
-      #Cancelled nvidia 
+      #Cancelled nvidia
       #- xorg-x11-server-Xwayland
       #- xorg-x11-drv-nvidia-cuda
 
@@ -50,7 +50,7 @@ modules:
       - google-noto-emoji-fonts
       - gnome-disk-utility
       - gparted
-      
+
       # sound
       - wireplumber
       - pipewire
@@ -71,13 +71,13 @@ modules:
       #- p7zip
       #- unrar-free
       #- akmod-nvidia
-      - pipewire-alsa 
+      - pipewire-alsa
       # screenshot
       #- slurp
       #- grim
 
-      # display      
-      # - libva-nvidia-driver 
+      # display
+      # - libva-nvidia-driver
 
       - wlr-randr
       - wlsunset
@@ -88,7 +88,7 @@ modules:
 
       # terminal
       - foot
-      - fish  
+      - fish
 
       # notifications
       - dunst
@@ -99,12 +99,12 @@ modules:
       - gnome-themes-extra
       - gnome-icon-theme
       - paper-icon-theme
-      - breeze-icon-theme 
+      - breeze-icon-theme
       - papirus-icon-theme
       - kvantum
       - adw-gtk3-theme
-      - adwaita-qt6 
-      - libadwaita-qt5 
+      - adwaita-qt6
+      - libadwaita-qt5
       - libadwaita-qt6
 
       ##Hyperland specific
@@ -112,7 +112,7 @@ modules:
       - waybar
       - xdg-desktop-portal-hyprland
       - cpio
-      - 'gcc-c++'
+      - "gcc-c++"
       - cmake
       - meson
       - hyprcursor
@@ -121,11 +121,11 @@ modules:
       - tomlplusplus-devel
       ##base-nvidia
       #- nvidia-vaapi-backend
-      - ffmpeg 
-      - gstreamer1-plugin-libav 
-      - gstreamer1-plugins-bad-free-extras 
-      - gstreamer1-plugins-bad-freeworld 
-      - gstreamer1-plugins-ugly 
+      - ffmpeg
+      - gstreamer1-plugin-libav
+      - gstreamer1-plugins-bad-free-extras
+      - gstreamer1-plugins-bad-freeworld
+      - gstreamer1-plugins-ugly
       - gstreamer1-vaapi
 
       #- brightnessctl
@@ -145,7 +145,7 @@ modules:
       # repo-name: flathub
       # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
-          - org.ferdium.Ferdium
+        - org.ferdium.Ferdium
         # - org.mozilla.firefox
         # - org.gnome.Loupe
         # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
