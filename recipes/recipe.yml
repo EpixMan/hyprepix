@@ -21,6 +21,10 @@ modules:
       #  - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-40.noarch.rpm
       #  - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-40.noarch.rpm
     install:
+      - podman-compose
+      - docker-compose
+      - gh
+
       #Cancelled nvidia
       #- xorg-x11-server-Xwayland
       #- xorg-x11-drv-nvidia-cuda
