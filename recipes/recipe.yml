@@ -15,11 +15,11 @@ modules:
   #  - source: system/hyprland
   #    destination: /
   - type: rpm-ostree
-    repos:
-      # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
-      #with bazzite they should not be required
-      #  - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-40.noarch.rpm
-      #  - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-40.noarch.rpm
+    #repos:
+    # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+    #with bazzite they should not be required
+    #  - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-40.noarch.rpm
+    #  - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-40.noarch.rpm
     install:
       - podman-compose
       - docker-compose
@@ -129,11 +129,11 @@ modules:
       #- brightnessctl
       # - micro
       # - starship
-    #remove:
-    # example: removing firefox (in favor of the flatpak)
-    # "firefox" is the main package, "firefox-langpacks" is a dependency
-    # - firefox
-    # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+      #remove:
+      # example: removing firefox (in favor of the flatpak)
+      # "firefox" is the main package, "firefox-langpacks" is a dependency
+      # - firefox
+      # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
@@ -152,18 +152,17 @@ modules:
       # Installing different branches of the same Flatpak is not supported.
       # remove:
       # - org.gnome.eog
-  - type: script
-    scripts:
-      - settheming.sh
-      ##hyprland-scripts
-      - sethyprlandwaybarmodules.sh
-      #- "sudo rpm-ostree kargs --append=rd.driver.blacklist=nouveau --append=modprobe.blacklist=nouveau --append=nvidia-drm.modeset=1 # this might not be needed at some point when ostree systems will support the standard way to specify this."
-      #- hyprplugins.sh
-      ##SDDM
-      #- setsddmtheming.sh
-  - type: systemd
-    system:
-      enabled:
-        - sddm-boot.service
-
+  #- type: script
+  #scripts:
+  #- settheming.sh
+  ##hyprland-scripts
+  #- sethyprlandwaybarmodules.sh
+  #- "sudo rpm-ostree kargs --append=rd.driver.blacklist=nouveau --append=modprobe.blacklist=nouveau --append=nvidia-drm.modeset=1 # this might not be needed at some point when ostree systems will support the standard way to specify this."
+  #- hyprplugins.sh
+  ##SDDM
+  #- setsddmtheming.sh
+  #- type: systemd
+  #  system:
+  #   enabled:
+  #    - sddm-boot.service
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
