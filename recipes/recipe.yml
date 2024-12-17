@@ -10,10 +10,10 @@ image-version: "stable" # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - type: files
-    files:
-      - source: system/hyprland
-        destination: /
+  #- type: files
+  #files:
+  #  - source: system/hyprland
+  #    destination: /
   - type: rpm-ostree
     repos:
       # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
@@ -102,7 +102,6 @@ modules:
       - dunst
 
       # theme and GUI
-      - adwaita-qt5
       - fontawesome-fonts-all
       - gnome-themes-extra
       - gnome-icon-theme
@@ -111,9 +110,6 @@ modules:
       - papirus-icon-theme
       - kvantum
       - adw-gtk3-theme
-      - adwaita-qt6
-      - libadwaita-qt5
-      - libadwaita-qt6
 
       ##Hyperland specific
       - waybar
