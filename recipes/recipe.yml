@@ -35,8 +35,8 @@ modules:
       - gtk4-devel
       - stow
       ##SDDM stuff
-      - sddm
-      - sddm-themes
+      #- sddm
+      #- sddm-themes
       - qt5-qtgraphicaleffects
       - qt5-qtquickcontrols2
       - qt5-qtsvg
@@ -113,7 +113,7 @@ modules:
       - adw-gtk3-theme
 
       ##Hyperland specific
-      - waybar
+      #- waybar
       - cpio
       - "gcc-c++"
       - cmake
