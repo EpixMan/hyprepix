@@ -28,8 +28,9 @@ modules:
       - docker-compose
       - gh
       - fastfetch
-      - lutris
-      - wine-stable
+      ##Not needed in bazzite
+      #      - lutris
+      #- wine-stable
       #Cancelled nvidia
       #- xorg-x11-server-Xwayland
       #- xorg-x11-drv-nvidia-cuda
