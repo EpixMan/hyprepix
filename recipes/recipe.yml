@@ -5,7 +5,7 @@ name: hyprepix
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/bazzite-nvidia:latest
+base-image: ghcr.io/ublue-os/bazzite-nvidia
 image-version: "latest" #"latest" # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -27,6 +27,9 @@ modules:
       - podman-compose
       - docker-compose
       - gh
+      - fastfetch
+      - lutris
+      - wine-stable
       #Cancelled nvidia
       #- xorg-x11-server-Xwayland
       #- xorg-x11-drv-nvidia-cuda
