@@ -28,6 +28,7 @@ modules:
       - docker-compose
       - gh
       - fastfetch
+      - helix
       ##Not needed in bazzite
       #      - lutris
       #- wine-stable
